@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Multiverse Complete Combined Release Order</title>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --card: #14141f;
+            --card-hover: #1c1c2a;
+            --text: #e0e0e0;
+            --text-dim: #8888aa;
+            --accent: #e62429;
+            --accent2: #ff6b35;
+            --border: #2a2a3a;
+            --mcu: #e62429;
+            --raimi: #ff6b35;
+            --amazing: #ffa500;
+            --fox-xmen: #4a90d9;
+            --xmen-animated: #7b68ee;
+            --fox-ff: #3cb371;
+            --ssu: #9b59b6;
+            --spiderverse: #e74c3c;
+            --blade: #8b0000;
+            --daredevil: #c0392b;
+            --marvel-tv: #1abc9c;
+            --legacy-tv: #f39c12;
+            --animated: #00bcd4;
+            --ff-first: #2ecc71;
+            --other: #95a5a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: linear-gradient(135deg, #1a0000 0%, #0a0a0f 50%, #000a1a 100%);
+            border-bottom: 2px solid var(--accent);
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .header-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            row-gap: 10px;
+        }
+
+        .header h1 {
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #e62429, #ff6b35, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        /* === INSTAGRAM BADGE === */
+        .insta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 14px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 55%, #fcb045 100%);
+            color: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(230, 36, 41, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .insta-badge::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.25), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .insta-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(230, 36, 41, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+            filter: brightness(1.06);
+        }
+
+        .insta-badge:hover::before {
+            opacity: 1;
+        }
+
+        .insta-badge:active {
+            transform: translateY(0);
+        }
+
+        .insta-badge:focus-visible {
+            outline: 2px solid var(--accent2);
+            outline-offset: 2px;
+        }
+
+        .insta-badge svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .insta-badge span {
+            display: inline-block;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .header-title-row {
+                gap: 10px;
+            }
+            .insta-badge {
+                font-size: 0.72rem;
+                padding: 6px 12px;
+                gap: 6px;
+            }
+            .insta-badge svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header-title-row {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .insta-badge {
+                font-size: 0.74rem;
+                padding: 7px 14px;
+            }
+        }
+
+        .header p {
+            color: var(--text-dim);
+            max-width: 900px;
+            margin: 10px auto 0;
+            font-size: clamp(0.78rem, 2vw, 0.95rem);
+        }
+
+        .header p strong {
+            color: var(--accent2);
+        }
+
+        /* === LEGEND === */
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            padding: 14px 12px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            background: var(--card);
+            padding: 4px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* === CONTROLS === */
+        .controls {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 12px 0;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .search-row input {
+            flex: 1;
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-row input:focus {
+            border-color: var(--accent);
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .filter-row select {
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 7px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            outline: none;
+            cursor: pointer;
+            max-width: 180px;
+            flex: 1 1 auto;
+        }
+
+        .filter-row select:focus {
+            border-color: var(--accent);
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            background: var(--card-hover);
+            border-color: var(--accent);
+        }
+
+        .btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .btn-reset {
+            background: #2a1a1a;
+            border-color: #553333;
+        }
+
+        .btn-reset:hover {
+            background: #3a2020;
+            border-color: var(--accent);
+        }
+
+        /* === STATS === */
+        .stats-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 12px 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stats-numbers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.82rem;
+        }
+
+        .stats-numbers span {
+            color: var(--text-dim);
+        }
+
+        .stats-numbers strong {
+            color: var(--text);
+        }
+
+        .progress-container {
+            flex: 1;
+            min-width: 150px;
+            max-width: 400px;
+            height: 8px;
+            background: var(--card);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        /* === SECTIONS === */
+        .section-title {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 12px 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent2);
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* === ENTRY LIST === */
+        .entry-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8px 12px 40px;
+        }
+
+        .entry {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .entry:hover {
+            background: var(--card-hover);
+            border-color: #3a3a5a;
+        }
+
+        .entry.mcu-movie {
+            border-left: 4px solid var(--mcu);
+            background: linear-gradient(90deg, rgba(230, 36, 41, 0.06) 0%, var(--card) 60%);
+        }
+
+        .entry.mcu-movie .entry-title {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .entry.mcu-movie .entry-icon {
+            background: var(--mcu);
+            color: #fff;
+        }
+
+        .entry.upcoming-entry {
+            opacity: 0.7;
+            border-style: dashed;
+        }
+
+        .entry.upcoming-entry:hover {
+            opacity: 1;
+        }
+
+        /* Entry icon */
+        .entry-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            background: var(--border);
+            color: var(--text-dim);
+            position: relative;
+        }
+
+        .entry-icon .type-badge {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            font-size: 0.5rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 0 3px;
+            color: var(--text-dim);
+        }
+
+        /* Entry body */
+        .entry-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .entry-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .entry-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .entry-year {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            background: rgba(255,255,255,0.05);
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .entry-universe-badge {
+            font-size: 0.62rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        .entry-phase-badge {
+            font-size: 0.6rem;
+            padding: 2px 7px;
+            border-radius: 10px;
+            background: rgba(230, 36, 41, 0.2);
+            color: var(--accent2);
+            border: 1px solid rgba(230, 36, 41, 0.4);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .entry-importance {
+            font-size: 0.58rem;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .imp-essential {
+            background: rgba(230, 36, 41, 0.25);
+            color: #ff6b6b;
+            border: 1px solid rgba(230, 36, 41, 0.4);
+        }
+
+        .imp-recommended {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+
+        .imp-optional {
+            background: rgba(136, 136, 170, 0.15);
+            color: #8888aa;
+            border: 1px solid rgba(136, 136, 170, 0.25);
+        }
+
+        .entry-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            margin-top: 2px;
+        }
+
+        .entry-meta span {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .entry-notes {
+            font-size: 0.7rem;
+            color: #666688;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 8px;
+            border-left: 2px solid var(--border);
+        }
+
+        /* Watched toggle */
+        .watch-toggle {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            margin-top: 4px;
+        }
+
+        .watch-toggle:hover {
+            border-color: var(--accent);
+            background: rgba(230, 36, 41, 0.1);
+        }
+
+        .watch-toggle.watched {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .watch-toggle.watched::after {
+            content: '✓';
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .entry {
+                padding: 10px 12px;
+                gap: 10px;
+            }
+            .entry-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            .entry-title {
+                font-size: 0.85rem;
+            }
+            .filter-row select {
+                max-width: 100%;
+                flex: 1 1 calc(50% - 6px);
+                min-width: 120px;
+            }
+            .stats-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .progress-container {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .filter-row select {
+                flex: 1 1 100%;
+            }
+            .entry-header {
+                gap: 4px;
+            }
+            .entry-meta {
+                gap: 6px;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3a5a;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<div class="header">
+    <div class="header-title-row">
+        <h1>Marvel Multiverse Complete Combined Release Order</h1>
+        <a href="https://instagram.com/ratul96x"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="insta-badge"
+           aria-label="Instagram profile @ratul96x">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/>
+            </svg>
+            <span>@ratul96x</span>
+        </a>
+    </div>
+    <p>
+        This is a combined Marvel Multiverse release-order database. Titles are arranged by their
+        <strong>actual real-world release dates</strong>, from oldest to newest.
+        This is <strong>NOT</strong> a story chronology or in-universe timeline.
+        Different Marvel universes and continuities are intentionally combined into one release-order list.
+    </p>
+</div>
+
+<!-- ==================== LEGEND ==================== -->
+<div class="legend" id="legend"></div>
+
+<!-- ==================== CONTROLS ==================== -->
+<div class="controls">
+    <div class="search-row">
+        <input type="text" id="searchInput" placeholder="🔍 Search titles, universes, franchises..." autocomplete="off">
+    </div>
+
+    <div class="filter-row">
+        <select id="filterUniverse">
+            <option value="">All Universes</option>
+        </select>
+        <select id="filterFranchise">
+            <option value="">All Franchises</option>
+        </select>
+        <select id="filterType">
+            <option value="">All Types</option>
+        </select>
+        <select id="filterPhase">
+            <option value="">All Phases</option>
+        </select>
+        <select id="filterStatus">
+            <option value="">Released + Upcoming</option>
+            <option value="released">Released Only</option>
+            <option value="upcoming">Upcoming Only</option>
+        </select>
+        <select id="filterImportance">
+            <option value="">All Importance</option>
+            <option value="Essential">Essential</option>
+            <option value="Recommended">Recommended</option>
+            <option value="Optional">Optional</option>
+        </select>
+    </div>
+
+    <div class="btn-row">
+        <button class="btn" id="btnMcuMovies">MCU Movies Only</button>
+        <button class="btn" id="btnMovies">Movies</button>
+        <button class="btn" id="btnSeries">Series</button>
+        <button class="btn" id="btnAnimated">Animated</button>
+        <button class="btn btn-reset" id="btnReset">Reset Filters</button>
+        <button class="btn" id="btnShowAll">Show All</button>
+    </div>
+</div>
+
+<!-- ==================== STATS ==================== -->
+<div class="stats-bar">
+    <div class="stats-numbers">
+        <span>Released: <strong id="statTotal">0</strong></span>
+        <span>Watched: <strong id="statWatched">0</strong></span>
+        <span>Remaining: <strong id="statRemaining">0</strong></span>
+        <span>Completion: <strong id="statPercent">0%</strong></span>
+    </div>
+    <div class="progress-container">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+</div>
+
+<!-- ==================== RELEASED ==================== -->
+<div class="section-title" id="releasedTitle">Released</div>
+<div class="entry-list" id="releasedList"></div>
+
+<!-- ==================== UPCOMING ==================== -->
+<div class="section-title" id="upcomingTitle" style="display:none;">Upcoming</div>
+<div class="entry-list" id="upcomingList"></div>
+
+<script>
+// ============================================================
+// UNIVERSE DEFINITIONS
+// ============================================================
+const UNIVERSES = {
+    'MCU': { color: '#e62429', label: 'MCU / Earth-616' },
+    'Raimi Spider-Man Universe': { color: '#ff6b35', label: 'Raimi Spider-Man Universe' },
+    'The Amazing Spider-Man Universe': { color: '#ffa500', label: 'The Amazing Spider-Man Universe' },
+    'Fox X-Men Universe': { color: '#4a90d9', label: 'Fox X-Men Universe' },
+    'X-Men Animated Universe': { color: '#7b68ee', label: 'X-Men Animated Universe' },
+    'Fox Fantastic Four Universe': { color: '#3cb371', label: 'Fox Fantastic Four Universe' },
+    'Sony\'s Spider-Man Universe (SSU)': { color: '#9b59b6', label: 'Sony\'s Spider-Man Universe (SSU)' },
+    'Spider-Verse Animated Universe': { color: '#e74c3c', label: 'Spider-Verse Animated Universe' },
+    'Blade Legacy Universe': { color: '#8b0000', label: 'Blade Legacy Universe' },
+    'Daredevil/Elektra Legacy Universe': { color: '#c0392b', label: 'Daredevil/Elektra Legacy Universe' },
+    'Marvel Television / Legacy Marvel TV': { color: '#1abc9c', label: 'Marvel Television / Legacy Marvel TV' },
+    'Marvel Animated & Alternate Universe': { color: '#00bcd4', label: 'Marvel Animated & Alternate Universe' },
+    'Fantastic Four: First Steps Universe': { color: '#2ecc71', label: 'Fantastic Four: First Steps Universe' },
+    'Continuity disputed/unclear': { color: '#95a5a6', label: 'Continuity disputed/unclear' }
+};
+
+// ============================================================
+// RELEASE DATA — strictly sorted by real-world release date
+// ============================================================
+const DATA = [
+    // ============ 1998 ============
+    {
+        title: "Blade",
+        date: "1998-08-21",
+        year: 1998,
+        universe: "Blade Legacy Universe",
+        franchise: "Blade",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "First Marvel film to be a commercial success. New Line Cinema. Directed by Stephen Norrington.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2000 ============
+    {
+        title: "X-Men",
+        date: "2000-07-14",
+        year: 2000,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Bryan Singer. Launched the Fox X-Men film franchise. 20th Century Fox.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2002 ============
+    {
+        title: "Blade II",
+        date: "2002-03-22",
+        year: 2002,
+        universe: "Blade Legacy Universe",
+        franchise: "Blade",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Guillermo del Toro. New Line Cinema.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Spider-Man",
+        date: "2002-05-03",
+        year: 2002,
+        universe: "Raimi Spider-Man Universe",
+        franchise: "Spider-Man (Raimi)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Sam Raimi. Starring Tobey Maguire. Columbia Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2003 ============
+    {
+        title: "Daredevil",
+        date: "2003-02-14",
+        year: 2003,
+        universe: "Daredevil/Elektra Legacy Universe",
+        franchise: "Daredevil / Elektra",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Mark Steven Johnson. Starring Ben Affleck. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "X2: X-Men United",
+        date: "2003-05-02",
+        year: 2003,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Bryan Singer. 20th Century Fox.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2004 ============
+    {
+        title: "Blade: Trinity",
+        date: "2004-12-08",
+        year: 2004,
+        universe: "Blade Legacy Universe",
+        franchise: "Blade",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by David S. Goyer. New Line Cinema.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "Spider-Man 2",
+        date: "2004-06-30",
+        year: 2004,
+        universe: "Raimi Spider-Man Universe",
+        franchise: "Spider-Man (Raimi)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Sam Raimi. Starring Tobey Maguire. Columbia Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2005 ============
+    {
+        title: "Elektra",
+        date: "2005-01-14",
+        year: 2005,
+        universe: "Daredevil/Elektra Legacy Universe",
+        franchise: "Daredevil / Elektra",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Spin-off from Daredevil (2003). Directed by Rob Bowman. 20th Century Fox.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "Fantastic Four",
+        date: "2005-07-08",
+        year: 2005,
+        universe: "Fox Fantastic Four Universe",
+        franchise: "Fantastic Four (Fox)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Tim Story. Starring Ioan Gruffudd, Jessica Alba, Chris Evans. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2006 ============
+    {
+        title: "X-Men: The Last Stand",
+        date: "2006-05-26",
+        year: 2006,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Brett Ratner. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Blade: The Series — Season 1",
+        date: "2006-06-28",
+        year: 2006,
+        universe: "Blade Legacy Universe",
+        franchise: "Blade",
+        type: "TV Series",
+        phase: "No official phase/grouping",
+        season: 1,
+        notes: "Starring Sticky Fingaz. Aired on Spike TV. One season, 12 episodes.",
+        importance: "Optional",
+        status: "released"
+    },
+    // ============ 2007 ============
+    {
+        title: "Spider-Man 3",
+        date: "2007-05-04",
+        year: 2007,
+        universe: "Raimi Spider-Man Universe",
+        franchise: "Spider-Man (Raimi)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Sam Raimi. Starring Tobey Maguire. Columbia Pictures.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Fantastic Four: Rise of the Silver Surfer",
+        date: "2007-06-15",
+        year: 2007,
+        universe: "Fox Fantastic Four Universe",
+        franchise: "Fantastic Four (Fox)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Tim Story. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2008 ============
+    {
+        title: "Iron Man",
+        date: "2008-05-02",
+        year: 2008,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Jon Favreau. Starring Robert Downey Jr. First MCU film. Marvel Studios / Paramount Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Incredible Hulk",
+        date: "2008-06-13",
+        year: 2008,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Louis Leterrier. Starring Edward Norton. Marvel Studios / Universal Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2009 ============
+    {
+        title: "X-Men Origins: Wolverine",
+        date: "2009-05-01",
+        year: 2009,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Gavin Hood. Starring Hugh Jackman. 20th Century Fox.",
+        importance: "Optional",
+        status: "released"
+    },
+    // ============ 2010 ============
+    {
+        title: "Iron Man 2",
+        date: "2010-05-07",
+        year: 2010,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Jon Favreau. Starring Robert Downey Jr. Marvel Studios / Paramount Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2011 ============
+    {
+        title: "Thor",
+        date: "2011-05-06",
+        year: 2011,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Kenneth Branagh. Starring Chris Hemsworth. Marvel Studios / Paramount Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "X-Men: First Class",
+        date: "2011-06-03",
+        year: 2011,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Matthew Vaughn. Prequel to the original X-Men trilogy. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Captain America: The First Avenger",
+        date: "2011-07-22",
+        year: 2011,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Joe Johnston. Starring Chris Evans. Marvel Studios / Paramount Pictures.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2012 ============
+    {
+        title: "The Avengers",
+        date: "2012-05-04",
+        year: 2012,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 1",
+        season: null,
+        notes: "Directed by Joss Whedon. First MCU crossover film. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2013 ============
+    {
+        title: "Iron Man 3",
+        date: "2013-05-03",
+        year: 2013,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by Shane Black. Starring Robert Downey Jr. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Wolverine",
+        date: "2013-07-26",
+        year: 2013,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by James Mangold. Starring Hugh Jackman. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Thor: The Dark World",
+        date: "2013-11-08",
+        year: 2013,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by Alan Taylor. Starring Chris Hemsworth. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2014 ============
+    {
+        title: "Captain America: The Winter Soldier",
+        date: "2014-04-04",
+        year: 2014,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Starring Chris Evans. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Guardians of the Galaxy",
+        date: "2014-08-01",
+        year: 2014,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by James Gunn. Starring Chris Pratt. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2015 ============
+    {
+        title: "Avengers: Age of Ultron",
+        date: "2015-05-01",
+        year: 2015,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by Joss Whedon. Starring Robert Downey Jr. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Ant-Man",
+        date: "2015-07-17",
+        year: 2015,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 2",
+        season: null,
+        notes: "Directed by Peyton Reed. Starring Paul Rudd. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Fantastic Four",
+        date: "2015-08-07",
+        year: 2015,
+        universe: "Fox Fantastic Four Universe",
+        franchise: "Fantastic Four (Fox)",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Josh Trank. A reboot with a different cast and tone. 20th Century Fox. Continuity disputed/unclear — often considered a separate continuity from the 2005/2007 films.",
+        importance: "Optional",
+        status: "released"
+    },
+    // ============ 2016 ============
+    {
+        title: "Deadpool",
+        date: "2016-02-12",
+        year: 2016,
+        universe: "Fox X-Men Universe",
+        franchise: "Deadpool",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Tim Miller. Starring Ryan Reynolds. 20th Century Fox. Part of the Fox X-Men franchise.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Captain America: Civil War",
+        date: "2016-05-06",
+        year: 2016,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Starring Chris Evans and Robert Downey Jr. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "X-Men: Apocalypse",
+        date: "2016-05-27",
+        year: 2016,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Bryan Singer. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Doctor Strange",
+        date: "2016-11-04",
+        year: 2016,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Scott Derrickson. Starring Benedict Cumberbatch. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2017 ============
+    {
+        title: "Logan",
+        date: "2017-03-03",
+        year: 2017,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by James Mangold. Starring Hugh Jackman. 20th Century Fox. Rated R.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Guardians of the Galaxy Vol. 2",
+        date: "2017-05-05",
+        year: 2017,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by James Gunn. Starring Chris Pratt. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Spider-Man: Homecoming",
+        date: "2017-07-07",
+        year: 2017,
+        universe: "MCU",
+        franchise: "MCU / Spider-Man",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Jon Watts. Starring Tom Holland. Co-produced by Columbia Pictures and Marvel Studios. Sony / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Thor: Ragnarok",
+        date: "2017-11-03",
+        year: 2017,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Taika Waititi. Starring Chris Hemsworth. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2018 ============
+    {
+        title: "Black Panther",
+        date: "2018-02-16",
+        year: 2018,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Ryan Coogler. Starring Chadwick Boseman. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Avengers: Infinity War",
+        date: "2018-04-27",
+        year: 2018,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Deadpool 2",
+        date: "2018-05-18",
+        year: 2018,
+        universe: "Fox X-Men Universe",
+        franchise: "Deadpool",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by David Leitch. Starring Ryan Reynolds. 20th Century Fox.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Ant-Man and the Wasp",
+        date: "2018-07-06",
+        year: 2018,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Peyton Reed. Starring Paul Rudd and Evangeline Lilly. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Venom",
+        date: "2018-10-05",
+        year: 2018,
+        universe: "Sony's Spider-Man Universe (SSU)",
+        franchise: "Venom",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Ruben Fleischer. Starring Tom Hardy. Columbia Pictures. First SSU film.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Spider-Man: Into the Spider-Verse",
+        date: "2018-12-14",
+        year: 2018,
+        universe: "Spider-Verse Animated Universe",
+        franchise: "Spider-Verse (Animated)",
+        type: "Animated Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Bob Persichetti, Peter Ramsey, and Rodney Rothman. Sony Pictures Animation. Won Academy Award for Best Animated Feature.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2019 ============
+    {
+        title: "Captain Marvel",
+        date: "2019-03-08",
+        year: 2019,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Anna Boden and Ryan Fleck. Starring Brie Larson. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Avengers: Endgame",
+        date: "2019-04-26",
+        year: 2019,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Conclusion of the Infinity Saga. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Dark Phoenix",
+        date: "2019-06-07",
+        year: 2019,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Simon Kinberg. 20th Century Fox. Final mainline X-Men film before Disney acquisition.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "Spider-Man: Far From Home",
+        date: "2019-07-02",
+        year: 2019,
+        universe: "MCU",
+        franchise: "MCU / Spider-Man",
+        type: "Movie",
+        phase: "Phase 3",
+        season: null,
+        notes: "Directed by Jon Watts. Starring Tom Holland. Epilogue to the Infinity Saga. Sony / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2020 ============
+    {
+        title: "The New Mutants",
+        date: "2020-08-28",
+        year: 2020,
+        universe: "Fox X-Men Universe",
+        franchise: "X-Men",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Josh Boone. 20th Century Fox. Final Fox X-Men film released. Horror-influenced spin-off.",
+        importance: "Optional",
+        status: "released"
+    },
+    // ============ 2021 ============
+    {
+        title: "WandaVision — Season 1",
+        date: "2021-01-15",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "First MCU Disney+ series. Starring Elizabeth Olsen and Paul Bettany. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Falcon and the Winter Soldier — Season 1",
+        date: "2021-03-19",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Anthony Mackie and Sebastian Stan. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Loki — Season 1",
+        date: "2021-06-09",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Tom Hiddleston. Introduced the TVA and multiverse. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Black Widow",
+        date: "2021-07-09",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Cate Shortland. Starring Scarlett Johansson. Released simultaneously in theaters and on Disney+ Premier Access. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "What If...? — Season 1",
+        date: "2021-08-11",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Animated Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Marvel Studios' first animated series. Explores alternate MCU timelines. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Shang-Chi and the Legend of the Ten Rings",
+        date: "2021-09-03",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Destin Daniel Cretton. Starring Simu Liu. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Eternals",
+        date: "2021-11-05",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Chloé Zhao. Starring Gemma Chan and Richard Madden. Marvel Studios / Disney.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Hawkeye — Season 1",
+        date: "2021-11-24",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Jeremy Renner and Hailee Steinfeld. Introduced Kate Bishop and Maya Lopez. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Spider-Man: No Way Home",
+        date: "2021-12-17",
+        year: 2021,
+        universe: "MCU",
+        franchise: "MCU / Spider-Man",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Jon Watts. Starring Tom Holland, Tobey Maguire, and Andrew Garfield. Multiverse crossover. Sony / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2022 ============
+    {
+        title: "Moon Knight — Season 1",
+        date: "2022-03-30",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Oscar Isaac. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Doctor Strange in the Multiverse of Madness",
+        date: "2022-05-06",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Sam Raimi. Starring Benedict Cumberbatch and Elizabeth Olsen. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Ms. Marvel — Season 1",
+        date: "2022-06-08",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Iman Vellani. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Thor: Love and Thunder",
+        date: "2022-07-08",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Taika Waititi. Starring Chris Hemsworth and Natalie Portman. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "I Am Groot — Season 1",
+        date: "2022-08-10",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Animated Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Animated shorts featuring Baby Groot. Marvel Studios / Disney+.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "She-Hulk: Attorney at Law — Season 1",
+        date: "2022-08-18",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 4",
+        season: 1,
+        notes: "Starring Tatiana Maslany and Mark Ruffalo. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Werewolf by Night",
+        date: "2022-10-07",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Special",
+        phase: "Phase 4",
+        season: null,
+        notes: "Marvel Studios Special Presentation. Starring Gael García Bernal. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Black Panther: Wakanda Forever",
+        date: "2022-11-11",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 4",
+        season: null,
+        notes: "Directed by Ryan Coogler. Starring Letitia Wright and Angela Bassett. Tribute to Chadwick Boseman. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Guardians of the Galaxy Holiday Special",
+        date: "2022-11-25",
+        year: 2022,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Special",
+        phase: "Phase 4",
+        season: null,
+        notes: "Marvel Studios Special Presentation. Directed by James Gunn. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2023 ============
+    {
+        title: "Ant-Man and the Wasp: Quantumania",
+        date: "2023-02-17",
+        year: 2023,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by Peyton Reed. Starring Paul Rudd and Jonathan Majors. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Guardians of the Galaxy Vol. 3",
+        date: "2023-05-05",
+        year: 2023,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by James Gunn. Starring Chris Pratt. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Secret Invasion — Season 1",
+        date: "2023-06-21",
+        year: 2023,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Starring Samuel L. Jackson. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Loki — Season 2",
+        date: "2023-10-05",
+        year: 2023,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 2,
+        notes: "Starring Tom Hiddleston. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Marvels",
+        date: "2023-11-10",
+        year: 2023,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by Nia DaCosta. Starring Brie Larson, Teyonah Parris, and Iman Vellani. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2024 ============
+    {
+        title: "Echo — Season 1",
+        date: "2024-01-09",
+        year: 2024,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Starring Alaqua Cox. First Marvel Spotlight series. Marvel Studios / Disney+ and Hulu.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Madame Web",
+        date: "2024-02-14",
+        year: 2024,
+        universe: "Sony's Spider-Man Universe (SSU)",
+        franchise: "SSU",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by S.J. Clarkson. Starring Dakota Johnson. Columbia Pictures. SSU.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "X-Men '97 — Season 1",
+        date: "2024-03-20",
+        year: 2024,
+        universe: "X-Men Animated Universe",
+        franchise: "X-Men Animated",
+        type: "Animated Series",
+        phase: "No official phase/grouping",
+        season: 1,
+        notes: "Revival of X-Men: The Animated Series. Marvel Animation / Disney+. Continuity continues from the 1990s animated series.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Deadpool & Wolverine",
+        date: "2024-07-26",
+        year: 2024,
+        universe: "MCU",
+        franchise: "MCU / Deadpool",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by Shawn Levy. Starring Ryan Reynolds and Hugh Jackman. Integrates Fox X-Men characters into MCU multiverse. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Agatha All Along — Season 1",
+        date: "2024-09-18",
+        year: 2024,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Starring Kathryn Hahn. Spin-off from WandaVision. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Venom: The Last Dance",
+        date: "2024-10-25",
+        year: 2024,
+        universe: "Sony's Spider-Man Universe (SSU)",
+        franchise: "Venom",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Kelly Marcel. Starring Tom Hardy. Columbia Pictures. Conclusion of the Venom trilogy.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Kraven the Hunter",
+        date: "2024-12-13",
+        year: 2024,
+        universe: "Sony's Spider-Man Universe (SSU)",
+        franchise: "SSU",
+        type: "Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by J.C. Chandor. Starring Aaron Taylor-Johnson. Columbia Pictures. SSU.",
+        importance: "Optional",
+        status: "released"
+    },
+    {
+        title: "What If...? — Season 3",
+        date: "2024-12-22",
+        year: 2024,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Animated Series",
+        phase: "Phase 5",
+        season: 3,
+        notes: "Final season of What If...? Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2025 ============
+    {
+        title: "Your Friendly Neighborhood Spider-Man — Season 1",
+        date: "2025-01-29",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU / Spider-Man",
+        type: "Animated Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Marvel Studios animated series. Alternate MCU timeline. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Captain America: Brave New World",
+        date: "2025-02-14",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by Julius Onah. Starring Anthony Mackie and Harrison Ford. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Daredevil: Born Again — Season 1",
+        date: "2025-03-04",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU / Daredevil",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Starring Charlie Cox and Vincent D'Onofrio. Continues the story of the Netflix Daredevil series within the MCU. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Thunderbolts*",
+        date: "2025-05-02",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Movie",
+        phase: "Phase 5",
+        season: null,
+        notes: "Directed by Jake Schreier. Starring Florence Pugh, Sebastian Stan, and David Harbour. Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Ironheart — Season 1",
+        date: "2025-06-24",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 5",
+        season: 1,
+        notes: "Starring Dominique Thorne. Spin-off from Black Panther: Wakanda Forever. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "The Fantastic Four: First Steps",
+        date: "2025-07-25",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU / Fantastic Four",
+        type: "Movie",
+        phase: "Phase 6",
+        season: null,
+        notes: "Directed by Matt Shakman. Starring Pedro Pascal, Vanessa Kirby, Joseph Quinn, and Ebon Moss-Bachrach. Set in a retro-futuristic 1960s-inspired universe (Earth-828). Marvel Studios / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "Eyes of Wakanda — Season 1",
+        date: "2025-08-01",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU / Black Panther",
+        type: "Animated Series",
+        phase: "Phase 6",
+        season: 1,
+        notes: "Marvel Studios animated series. Four-episode series about Wakandan warriors throughout history. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Marvel Zombies — Season 1",
+        date: "2025-10-03",
+        year: 2025,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "Animated Series",
+        phase: "Phase 6",
+        season: 1,
+        notes: "Marvel Studios animated series. TV-MA. Spin-off from What If...? Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Wonder Man — Season 1",
+        date: "2026-01-27",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 6",
+        season: 1,
+        notes: "Starring Yahya Abdul-Mateen II and Ben Kingsley. Marvel Studios / Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    // ============ 2026 ============
+    {
+        title: "Daredevil: Born Again — Season 2",
+        date: "2026-03-24",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU / Daredevil",
+        type: "TV Series",
+        phase: "Phase 6",
+        season: 2,
+        notes: "Starring Charlie Cox. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "The Punisher: One Last Kill",
+        date: "2026-05-12",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU / Punisher",
+        type: "Special",
+        phase: "Phase 6",
+        season: null,
+        notes: "Marvel Studios Special Presentation. Starring Jon Bernthal. Disney+.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "X-Men '97 — Season 2",
+        date: "2026-07-01",
+        year: 2026,
+        universe: "X-Men Animated Universe",
+        franchise: "X-Men Animated",
+        type: "Animated Series",
+        phase: "No official phase/grouping",
+        season: 2,
+        notes: "Marvel Animation / Disney+. Nine episodes.",
+        importance: "Recommended",
+        status: "released"
+    },
+    {
+        title: "Spider-Man: Brand New Day",
+        date: "2026-07-31",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU / Spider-Man",
+        type: "Movie",
+        phase: "Phase 6",
+        season: null,
+        notes: "Directed by Destin Daniel Cretton. Starring Tom Holland. Fourth MCU Spider-Man film. Sony / Disney.",
+        importance: "Essential",
+        status: "released"
+    },
+    {
+        title: "VisionQuest — Season 1",
+        date: "2026-10-14",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU",
+        type: "TV Series",
+        phase: "Phase 6",
+        season: 1,
+        notes: "Starring Paul Bettany and James Spader. Final chapter of the WandaVision trilogy. Marvel Studios / Disney+.",
+        importance: "Essential",
+        status: "released"
+    },
+    // ============ 2027 (UPCOMING) ============
+    {
+        title: "Avengers: Doomsday",
+        date: "2026-12-18",
+        year: 2026,
+        universe: "MCU",
+        franchise: "MCU / Avengers",
+        type: "Movie",
+        phase: "Phase 6",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Major MCU crossover event. Marvel Studios / Disney. Officially announced and scheduled.",
+        importance: "Essential",
+        status: "upcoming"
+    },
+    {
+        title: "Avengers: Secret Wars",
+        date: "2027-12-17",
+        year: 2027,
+        universe: "MCU",
+        franchise: "MCU / Avengers",
+        type: "Movie",
+        phase: "Phase 6",
+        season: null,
+        notes: "Directed by Anthony and Joe Russo. Conclusion of the Multiverse Saga. Marvel Studios / Disney. Officially announced and scheduled.",
+        importance: "Essential",
+        status: "upcoming"
+    },
+    {
+        title: "Spider-Man: Beyond the Spider-Verse",
+        date: "2027-06-18",
+        year: 2027,
+        universe: "Spider-Verse Animated Universe",
+        franchise: "Spider-Verse (Animated)",
+        type: "Animated Movie",
+        phase: "No official phase/grouping",
+        season: null,
+        notes: "Directed by Bob Persichetti and Justin K. Thompson. Conclusion of the animated Spider-Verse trilogy. Sony Pictures Animation. Officially scheduled.",
+        importance: "Essential",
+        status: "upcoming"
+    },
+    // ============ 2028 (UPCOMING) ============
+    {
+        title: "Untitled X-Men Reboot",
+        date: "2028-05-05",
+        year: 2028,
+        universe: "MCU",
+        franchise: "MCU / X-Men",
+        type: "Movie",
+        phase: "Phase 7",
+        season: null,
+        notes: "Marvel Studios. Official release date announced. Part of MCU Phase 7.",
+        importance: "Essential",
+        status: "upcoming"
+    },
+    {
+        title: "Ghost Rider",
+        date: "2028-07-28",
+        year: 2028,
+        universe: "MCU",
+        franchise: "MCU / Ghost Rider",
+        type: "Movie",
+        phase: "Phase 7",
+        season: null,
+        notes: "Starring Ryan Gosling (officially confirmed). Marvel Studios / Disney. Official release date announced.",
+        importance: "Essential",
+        status: "upcoming"
+    },
+    {
+        title: "Black Panther 3",
+        date: "2028-12-15",
+        year: 2028,
+        universe: "MCU",
+        franchise: "MCU / Black Panther",
+        type: "Movie",
+        phase: "Phase 7",
+        season: null,
+        notes: "Marvel Studios. Official release date announced. Part of MCU Phase 7.",
+        importance: "Essential",
+        status: "upcoming"
+    }
+];
+
+// ============================================================
+// ADD MISSING RELEASED ENTRIES (Legacy TV, One-Shots, etc.)
+// ============================================================
+const ADDITIONAL_RELEASED = [
+    // Marvel One-Shots (MCU)
+    { title: "Marvel One-Shot: The Consultant", date: "2011-09-13", year: 2011, universe: "MCU", franchise: "MCU / One-Shots", type: "One-Shot", phase: "Phase 1", season: null, notes: "Marvel One-Shot short film. Included on Thor Blu-ray. Marvel Studios.", importance: "Optional", status: "released" },
+    { title: "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer", date: "2011-10-25", year: 2011, universe: "MCU", franchise: "MCU / One-Shots", type: "One-Shot", phase: "Phase 1", season: null, notes: "Marvel One-Shot short film. Included on Captain America: The First Avenger Blu-ray. Marvel Studios.", importance: "Optional", status: "released" },
+    { title: "Marvel One-Shot: Item 47", date: "2012-09-25", year: 2012, universe: "MCU", franchise: "MCU / One-Shots", type: "One-Shot", phase: "Phase 1", season: null, notes: "Marvel One-Shot short film. Included on The Avengers Blu-ray. Marvel Studios.", importance: "Optional", status: "released" },
+    { title: "Marvel One-Shot: Agent Carter", date: "2013-09-24", year: 2013, universe: "MCU", franchise: "MCU / One-Shots", type: "One-Shot", phase: "Phase 2", season: null, notes: "Marvel One-Shot short film. Included on Iron Man 3 Blu-ray. Starring Hayley Atwell. Marvel Studios.", importance: "Recommended", status: "released" },
+    { title: "Marvel One-Shot: All Hail the King", date: "2014-02-25", year: 2014, universe: "MCU", franchise: "MCU / One-Shots", type: "One-Shot", phase: "Phase 2", season: null, notes: "Marvel One-Shot short film. Included on Thor: The Dark World Blu-ray. Starring Ben Kingsley. Marvel Studios.", importance: "Optional", status: "released" },
+
+    // Agent Carter (Marvel Television)
+    { title: "Marvel's Agent Carter — Season 1", date: "2015-01-06", year: 2015, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agent Carter", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Hayley Atwell. ABC. Set in the MCU after Captain America: The First Avenger. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agent Carter — Season 2", date: "2016-01-19", year: 2016, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agent Carter", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Hayley Atwell. ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+
+    // Agents of S.H.I.E.L.D. (Marvel Television)
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 1", date: "2013-09-24", year: 2013, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Clark Gregg. ABC. First Marvel Television series set in the MCU. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 2", date: "2014-09-23", year: 2014, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 3", date: "2015-09-29", year: 2015, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 3, notes: "ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 4", date: "2016-09-20", year: 2016, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 4, notes: "ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 5", date: "2017-12-01", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 5, notes: "ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 6", date: "2019-05-10", year: 2019, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 6, notes: "ABC. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Agents of S.H.I.E.L.D. — Season 7", date: "2020-05-27", year: 2020, universe: "Marvel Television / Legacy Marvel TV", franchise: "Agents of S.H.I.E.L.D.", type: "TV Series", phase: "No official phase/grouping", season: 7, notes: "ABC. Final season. Produced by Marvel Television.", importance: "Recommended", status: "released" },
+
+    // Netflix / The Defenders Saga (Marvel Television)
+    { title: "Marvel's Daredevil — Season 1", date: "2015-04-10", year: 2015, universe: "Marvel Television / Legacy Marvel TV", franchise: "Daredevil (Netflix)", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Charlie Cox. Netflix. Marvel Television. Part of the Defenders Saga.", importance: "Essential", status: "released" },
+    { title: "Marvel's Jessica Jones — Season 1", date: "2015-11-20", year: 2015, universe: "Marvel Television / Legacy Marvel TV", franchise: "Jessica Jones", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Krysten Ritter. Netflix. Marvel Television. Part of the Defenders Saga.", importance: "Essential", status: "released" },
+    { title: "Marvel's Daredevil — Season 2", date: "2016-03-18", year: 2016, universe: "Marvel Television / Legacy Marvel TV", franchise: "Daredevil (Netflix)", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Charlie Cox. Netflix. Marvel Television. Introduced Elektra and The Punisher.", importance: "Essential", status: "released" },
+    { title: "Marvel's Luke Cage — Season 1", date: "2016-09-30", year: 2016, universe: "Marvel Television / Legacy Marvel TV", franchise: "Luke Cage", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Mike Colter. Netflix. Marvel Television. Part of the Defenders Saga.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Iron Fist — Season 1", date: "2017-03-17", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "Iron Fist", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Finn Jones. Netflix. Marvel Television. Part of the Defenders Saga.", importance: "Recommended", status: "released" },
+    { title: "Marvel's The Defenders — Season 1", date: "2017-08-18", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "The Defenders", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Crossover miniseries. Starring Charlie Cox, Krysten Ritter, Mike Colter, and Finn Jones. Netflix. Marvel Television.", importance: "Essential", status: "released" },
+    { title: "Marvel's The Punisher — Season 1", date: "2017-11-17", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "The Punisher (Netflix)", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Starring Jon Bernthal. Netflix. Marvel Television. Spin-off from Daredevil.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Jessica Jones — Season 2", date: "2018-03-08", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Jessica Jones", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Krysten Ritter. Netflix. Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Luke Cage — Season 2", date: "2018-06-22", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Luke Cage", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Mike Colter. Netflix. Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Iron Fist — Season 2", date: "2018-09-07", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Iron Fist", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Finn Jones. Netflix. Marvel Television.", importance: "Optional", status: "released" },
+    { title: "Marvel's Daredevil — Season 3", date: "2018-10-19", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Daredevil (Netflix)", type: "TV Series", phase: "No official phase/grouping", season: 3, notes: "Starring Charlie Cox. Netflix. Marvel Television. Introduced Bullseye.", importance: "Essential", status: "released" },
+    { title: "Marvel's The Punisher — Season 2", date: "2019-01-18", year: 2019, universe: "Marvel Television / Legacy Marvel TV", franchise: "The Punisher (Netflix)", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Starring Jon Bernthal. Netflix. Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Jessica Jones — Season 3", date: "2019-06-14", year: 2019, universe: "Marvel Television / Legacy Marvel TV", franchise: "Jessica Jones", type: "TV Series", phase: "No official phase/grouping", season: 3, notes: "Starring Krysten Ritter. Netflix. Marvel Television. Final Defenders Saga series.", importance: "Recommended", status: "released" },
+
+    // Runaways (Hulu / Marvel Television)
+    { title: "Marvel's Runaways — Season 1", date: "2017-11-21", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "Runaways", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Hulu. Marvel Television. Based on the Runaways comics.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Runaways — Season 2", date: "2018-12-21", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Runaways", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Hulu. Marvel Television.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Runaways — Season 3", date: "2019-12-13", year: 2019, universe: "Marvel Television / Legacy Marvel TV", franchise: "Runaways", type: "TV Series", phase: "No official phase/grouping", season: 3, notes: "Hulu. Marvel Television. Final season. Crossed over with Cloak & Dagger.", importance: "Recommended", status: "released" },
+
+    // Cloak & Dagger (Freeform / Marvel Television)
+    { title: "Marvel's Cloak & Dagger — Season 1", date: "2018-06-07", year: 2018, universe: "Marvel Television / Legacy Marvel TV", franchise: "Cloak & Dagger", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Freeform. Marvel Television. Based on the Cloak & Dagger comics.", importance: "Recommended", status: "released" },
+    { title: "Marvel's Cloak & Dagger — Season 2", date: "2019-04-04", year: 2019, universe: "Marvel Television / Legacy Marvel TV", franchise: "Cloak & Dagger", type: "TV Series", phase: "No official phase/grouping", season: 2, notes: "Freeform. Marvel Television. Final season.", importance: "Recommended", status: "released" },
+
+    // Inhumans (ABC / Marvel Television)
+    { title: "Marvel's Inhumans — Season 1", date: "2017-09-29", year: 2017, universe: "Marvel Television / Legacy Marvel TV", franchise: "Inhumans", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "ABC. Marvel Television. First two episodes released in IMAX theaters before TV premiere. One season.", importance: "Optional", status: "released" },
+
+    // Helstrom (Hulu / Marvel Television)
+    { title: "Helstrom — Season 1", date: "2020-10-16", year: 2020, universe: "Marvel Television / Legacy Marvel TV", franchise: "Helstrom", type: "TV Series", phase: "No official phase/grouping", season: 1, notes: "Hulu. Marvel Television. Loosely based on Marvel Comics characters. One season.", importance: "Optional", status: "released" },
+
+    // X-Men: The Animated Series
+    { title: "X-Men: The Animated Series — Season 1", date: "1992-10-31", year: 1992, universe: "X-Men Animated Universe", franchise: "X-Men Animated", type: "Animated Series", phase: "No official phase/grouping", season: 1, notes: "Fox Kids. The classic 1990s animated series. 76 episodes across 5 seasons.", importance: "Recommended", status: "released" },
+    { title: "X-Men: The Animated Series — Season 2", date: "1993-10-23", year: 1993, universe: "X-Men Animated Universe", franchise: "X-Men Animated", type: "Animated Series", phase: "No official phase/grouping", season: 2, notes: "Fox Kids.", importance: "Recommended", status: "released" },
+    { title: "X-Men: The Animated Series — Season 3", date: "1994-10-22", year: 1994, universe: "X-Men Animated Universe", franchise: "X-Men Animated", type: "Animated Series", phase: "No official phase/grouping", season: 3, notes: "Fox Kids.", importance: "Recommended", status: "released" },
+    { title: "X-Men: The Animated Series — Season 4", date: "1995-09-30", year: 1995, universe: "X-Men Animated Universe", franchise: "X-Men Animated", type: "Animated Series", phase: "No official phase/grouping", season: 4, notes: "Fox Kids.", importance: "Recommended", status: "released" },
+    { title: "X-Men: The Animated Series — Season 5", date: "1996-09-21", year: 1996, universe: "X-Men Animated Universe", franchise: "X-Men Animated", type: "Animated Series", phase: "No official phase/grouping", season: 5, notes: "Fox Kids. Final season.", importance: "Recommended", status: "released" },
+
+    // The Amazing Spider-Man
+    { title: "The Amazing Spider-Man", date: "2012-07-03", year: 2012, universe: "The Amazing Spider-Man Universe", franchise: "Spider-Man (Webb)", type: "Movie", phase: "No official phase/grouping", season: null, notes: "Directed by Marc Webb. Starring Andrew Garfield. Columbia Pictures. Reboot of the Spider-Man franchise.", importance: "Recommended", status: "released" },
+    { title: "The Amazing Spider-Man 2", date: "2014-05-02", year: 2014, universe: "The Amazing Spider-Man Universe", franchise: "Spider-Man (Webb)", type: "Movie", phase: "No official phase/grouping", season: null, notes: "Directed by Marc Webb. Starring Andrew Garfield and Emma Stone. Columbia Pictures.", importance: "Recommended", status: "released" },
+
+    // Spider-Man: Across the Spider-Verse
+    { title: "Spider-Man: Across the Spider-Verse", date: "2023-06-02", year: 2023, universe: "Spider-Verse Animated Universe", franchise: "Spider-Verse (Animated)", type: "Animated Movie", phase: "No official phase/grouping", season: null, notes: "Directed by Joaquim Dos Santos, Kemp Powers, and Justin K. Thompson. Sony Pictures Animation. Sequel to Into the Spider-Verse.", importance: "Essential", status: "released" },
+
+    // Spider-Man: Into the Spider-Verse short
+    { title: "Spider-Ham: Caught in a Ham", date: "2019-02-26", year: 2019, universe: "Spider-Verse Animated Universe", franchise: "Spider-Verse (Animated)", type: "One-Shot", phase: "No official phase/grouping", season: null, notes: "Animated short film. Prequel to Spider-Man: Into the Spider-Verse. Included on home media. Sony Pictures Animation.", importance: "Optional", status: "released" },
+];
+
+// Merge additional released entries into main data
+ADDITIONAL_RELEASED.forEach(e => DATA.push(e));
+
+// ============================================================
+// SORT BY RELEASE DATE (real-world, oldest first)
+// ============================================================
+DATA.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    if (dateA - dateB !== 0) return dateA - dateB;
+    // Tiebreaker: title
+    return a.title.localeCompare(b.title);
+});
+
+// ============================================================
+// POPULATE FILTER DROPDOWNS
+// ============================================================
+const universes = [...new Set(DATA.map(e => e.universe))].sort();
+const franchises = [...new Set(DATA.map(e => e.franchise))].sort();
+const types = [...new Set(DATA.map(e => e.type))].sort();
+const phases = [...new Set(DATA.map(e => e.phase).filter(Boolean))].sort();
+
+const selUniverse = document.getElementById('filterUniverse');
+const selFranchise = document.getElementById('filterFranchise');
+const selType = document.getElementById('filterType');
+const selPhase = document.getElementById('filterPhase');
+
+universes.forEach(u => {
+    const o = document.createElement('option');
+    o.value = u; o.textContent = u;
+    selUniverse.appendChild(o);
+});
+franchises.forEach(f => {
+    const o = document.createElement('option');
+    o.value = f; o.textContent = f;
+    selFranchise.appendChild(o);
+});
+types.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = t;
+    selType.appendChild(o);
+});
+phases.forEach(p => {
+    const o = document.createElement('option');
+    o.value = p; o.textContent = p;
+    selPhase.appendChild(o);
+});
+
+// ============================================================
+// LEGEND
+// ============================================================
+const legendEl = document.getElementById('legend');
+Object.entries(UNIVERSES).forEach(([key, val]) => {
+    const d = document.createElement('div');
+    d.className = 'legend-item';
+    d.innerHTML = `<span class="legend-dot" style="background:${val.color}"></span>${val.label}`;
+    legendEl.appendChild(d);
+});
+
+// ============================================================
+// WATCHED STATE (localStorage)
+// ============================================================
+let watchedSet = new Set();
+try {
+    const stored = localStorage.getItem('marvelMultiverseWatched');
+    if (stored) watchedSet = new Set(JSON.parse(stored));
+} catch (e) { /* ignore */ }
+
+function saveWatched() {
+    try {
+        localStorage.setItem('marvelMultiverseWatched', JSON.stringify([...watchedSet]));
+    } catch (e) { /* ignore */ }
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+const releasedListEl = document.getElementById('releasedList');
+const upcomingListEl = document.getElementById('upcomingList');
+const releasedTitleEl = document.getElementById('releasedTitle');
+const upcomingTitleEl = document.getElementById('upcomingTitle');
+
+function getFiltered() {
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const fUniverse = selUniverse.value;
+    const fFranchise = selFranchise.value;
+    const fType = selType.value;
+    const fPhase = selPhase.value;
+    const fStatus = document.getElementById('filterStatus').value;
+    const fImportance = document.getElementById('filterImportance').value;
+    const mcuOnly = document.getElementById('btnMcuMovies').classList.contains('active');
+    const moviesOnly = document.getElementById('btnMovies').classList.contains('active');
+    const seriesOnly = document.getElementById('btnSeries').classList.contains('active');
+    const animOnly = document.getElementById('btnAnimated').classList.contains('active');
+
+    return DATA.filter(e => {
+        // Status filter
+        if (fStatus === 'released' && e.status !== 'released') return false;
+        if (fStatus === 'upcoming' && e.status !== 'upcoming') return false;
+
+        // Universe
+        if (fUniverse && e.universe !== fUniverse) return false;
+        // Franchise
+        if (fFranchise && e.franchise !== fFranchise) return false;
+        // Type
+        if (fType && e.type !== fType) return false;
+        // Phase
+        if (fPhase && e.phase !== fPhase) return false;
+        // Importance
+        if (fImportance && e.importance !== fImportance) return false;
+
+        // MCU Movies Only
+        if (mcuOnly) {
+            if (e.universe !== 'MCU' || e.type !== 'Movie') return false;
+        }
+
+        // Movies only
+        if (moviesOnly) {
+            const movieTypes = ['Movie', 'Animated Movie', 'TV Movie'];
+            if (!movieTypes.includes(e.type)) return false;
+        }
+
+        // Series only
+        if (seriesOnly) {
+            const seriesTypes = ['TV Series', 'Animated Series', 'Mini-Series'];
+            if (!seriesTypes.includes(e.type)) return false;
+        }
+
+        // Animated only
+        if (animOnly) {
+            if (!e.type.includes('Animated')) return false;
+        }
+
+        // Search
+        if (search) {
+            const hay = (e.title + ' ' + e.universe + ' ' + e.franchise + ' ' + e.type + ' ' + e.phase + ' ' + (e.notes || '')).toLowerCase();
+            if (!hay.includes(search)) return false;
+        }
+
+        return true;
+    });
+}
+
+function renderEntry(entry) {
+    const div = document.createElement('div');
+    div.className = 'entry' + (entry.status === 'upcoming' ? ' upcoming-entry' : '');
+    if (entry.universe === 'MCU' && entry.type === 'Movie') {
+        div.classList.add('mcu-movie');
+    }
+
+    const uni = UNIVERSES[entry.universe] || { color: '#95a5a6', label: entry.universe };
+    const isWatched = watchedSet.has(entry.title);
+
+    // Type icon
+    let icon = '🎬';
+    if (entry.type.includes('Animated')) icon = '🎨';
+    else if (entry.type.includes('Series')) icon = '📺';
+    else if (entry.type === 'Special') icon = '⭐';
+    else if (entry.type === 'One-Shot') icon = '📎';
+    else if (entry.type === 'Movie') icon = '🎬';
+
+    // Importance class
+    let impClass = '';
+    if (entry.importance === 'Essential') impClass = 'imp-essential';
+    else if (entry.importance === 'Recommended') impClass = 'imp-recommended';
+    else if (entry.importance === 'Optional') impClass = 'imp-optional';
+
+    // Build HTML
+    let html = `
+        <div class="entry-icon" style="border: 1px solid ${uni.color}33;">
+            ${icon}
+            <span class="type-badge">${entry.type.substring(0,3).toUpperCase()}</span>
+        </div>
+        <div class="entry-body">
+            <div class="entry-header">
+                <span class="entry-title">${entry.title}</span>
+                <span class="entry-year">${entry.year}</span>
+                <span class="entry-universe-badge" style="background:${uni.color}">${entry.universe}</span>
+                ${entry.phase && entry.phase !== 'No official phase/grouping' ? `<span class="entry-phase-badge">${entry.phase}</span>` : ''}
+                <span class="entry-importance ${impClass}">${entry.importance || 'Optional'}</span>
+            </div>
+            <div class="entry-meta">
+                <span>📅 ${entry.date}</span>
+                <span>🏢 ${entry.franchise}</span>
+                <span>📁 ${entry.type}</span>
+                ${entry.season ? `<span>📺 Season ${entry.season}</span>` : ''}
+            </div>
+            ${entry.notes ? `<div class="entry-notes">${entry.notes}</div>` : ''}
+        </div>
+        <button class="watch-toggle ${isWatched ? 'watched' : ''}" data-title="${entry.title.replace(/"/g, '&quot;')}" title="${isWatched ? 'Mark unwatched' : 'Mark watched'}"></button>
+    `;
+
+    div.innerHTML = html;
+    return div;
+}
+
+function render() {
+    const filtered = getFiltered();
+
+    const released = filtered.filter(e => e.status === 'released');
+    const upcoming = filtered.filter(e => e.status === 'upcoming');
+
+    // Released
+    releasedListEl.innerHTML = '';
+    if (released.length === 0) {
+        releasedListEl.innerHTML = '<div class="empty-state"><div class="icon">🔍</div>No released titles match your filters.</div>';
+        releasedTitleEl.style.display = 'none';
+    } else {
+        releasedTitleEl.style.display = 'block';
+        releasedTitleEl.textContent = `Released (${released.length})`;
+        released.forEach(e => releasedListEl.appendChild(renderEntry(e)));
+    }
+
+    // Upcoming
+    upcomingListEl.innerHTML = '';
+    if (upcoming.length === 0) {
+        upcomingTitleEl.style.display = 'none';
+    } else {
+        upcomingTitleEl.style.display = 'block';
+        upcomingTitleEl.textContent = `Upcoming (${upcoming.length})`;
+        upcoming.forEach(e => upcomingListEl.appendChild(renderEntry(e)));
+    }
+
+    // Stats (only released count towards completion)
+    const totalReleased = DATA.filter(e => e.status === 'released').length;
+    const watchedReleased = [...watchedSet].filter(t => {
+        const entry = DATA.find(e => e.title === t && e.status === 'released');
+        return !!entry;
+    }).length;
+    const remaining = totalReleased - watchedReleased;
+    const pct = totalReleased > 0 ? Math.round((watchedReleased / totalReleased) * 100) : 0;
+
+    document.getElementById('statTotal').textContent = totalReleased;
+    document.getElementById('statWatched').textContent = watchedReleased;
+    document.getElementById('statRemaining').textContent = remaining;
+    document.getElementById('statPercent').textContent = pct + '%';
+    document.getElementById('progressFill').style.width = pct + '%';
+
+    // Attach watch toggle listeners
+    document.querySelectorAll('.watch-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const title = this.dataset.title;
+            if (watchedSet.has(title)) {
+                watchedSet.delete(title);
+                this.classList.remove('watched');
+                this.title = 'Mark watched';
+            } else {
+                watchedSet.add(title);
+                this.classList.add('watched');
+                this.title = 'Mark unwatched';
+            }
+            saveWatched();
+            // Update stats without full re-render
+            const totalReleased = DATA.filter(e => e.status === 'released').length;
+            const watchedReleased = [...watchedSet].filter(t => {
+                const entry = DATA.find(e => e.title === t && e.status === 'released');
+                return !!entry;
+            }).length;
+            const remaining = totalReleased - watchedReleased;
+            const pct = totalReleased > 0 ? Math.round((watchedReleased / totalReleased) * 100) : 0;
+            document.getElementById('statTotal').textContent = totalReleased;
+            document.getElementById('statWatched').textContent = watchedReleased;
+            document.getElementById('statRemaining').textContent = remaining;
+            document.getElementById('statPercent').textContent = pct + '%';
+            document.getElementById('progressFill').style.width = pct + '%';
+        });
+    });
+}
+
+// ============================================================
+// EVENT LISTENERS
+// ============================================================
+document.getElementById('searchInput').addEventListener('input', render);
+selUniverse.addEventListener('change', render);
+selFranchise.addEventListener('change', render);
+selType.addEventListener('change', render);
+selPhase.addEventListener('change', render);
+document.getElementById('filterStatus').addEventListener('change', render);
+document.getElementById('filterImportance').addEventListener('change', render);
+
+// Toggle buttons
+function setupToggle(id) {
+    const btn = document.getElementById(id);
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        render();
+    });
+}
+setupToggle('btnMcuMovies');
+setupToggle('btnMovies');
+setupToggle('btnSeries');
+setupToggle('btnAnimated');
+
+// Reset
+document.getElementById('btnReset').addEventListener('click', () => {
+    document.getElementById('searchInput').value = '';
+    selUniverse.value = '';
+    selFranchise.value = '';
+    selType.value = '';
+    selPhase.value = '';
+    document.getElementById('filterStatus').value = '';
+    document.getElementById('filterImportance').value = '';
+    document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    render();
+});
+
+// Show All
+document.getElementById('btnShowAll').addEventListener('click', () => {
+    document.getElementById('searchInput').value = '';
+    selUniverse.value = '';
+    selFranchise.value = '';
+    selType.value = '';
+    selPhase.value = '';
+    document.getElementById('filterStatus').value = '';
+    document.getElementById('filterImportance').value = '';
+    document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    render();
+});
+
+// ============================================================
+// INITIAL RENDER
+// ============================================================
+render();
+</script>
+
+</body>
+</html>
